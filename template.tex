@@ -1,0 +1,56 @@
+\makeatletter\let\ifGm@compatii\relax\makeatother
+\RequirePackage{atbegshi}
+\documentclass[final, hyperref={pdfpagemode=FullScreen}, aspectratio=169]{beamer}
+
+\title[name@cern.ch]{Title}
+\author{Author}
+\date[Short Title]{Location}
+
+\usepackage{lmodern}
+
+\include{beamer-settings}
+\include{extras}
+\include{sticky-notes}
+
+\addtobeamertemplate{frametitle}{}{
+\addvspace{-0.95cm}
+\hfill\includegraphics[height=0.75cm]{img/root-logo}
+}
+
+\setbeamercolor{section title}{fg=red}
+
+\begin{document}
+\selectlanguage{english}
+
+{\setbeamercolor{background canvas}{bg=rootbackground}
+\begin{frame}[plain,noframenumbering,label=titlepage]
+	\centering
+  \vspace{0.75cm}
+  \includegraphics[width=3cm]{img/root-splash}
+  \vspace{-1.75cm}
+
+	\titlepage
+\end{frame}
+}
+
+\begin{frame}
+  \frametitle{Agenda}
+  \footnotesize
+
+  \tableofcontents
+\end{frame}
+
+\section{New Section}
+
+\begin{frame}
+  \frametitle{Summary}
+  \footnotesize
+\end{frame}
+
+
+\appendix
+\beginbackup
+\section{Backup Slides}
+
+\backupend
+\end{document}
